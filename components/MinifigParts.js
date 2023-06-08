@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import ListProducts from "./ListProducts";
+import Styles from './Styles';
 import CircleSVG from '../assets/CircleSVG.jsx';
 export const MinifigParts = ({ route }) => {
   const [minifigPart, setMinifigPart] = useState(null);

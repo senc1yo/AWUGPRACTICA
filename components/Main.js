@@ -8,6 +8,7 @@ import { DetailsMinifig } from './DetailsMinifig';
 import { AlternateConst } from './AlternateConst';
 import { MinifigParts } from './MinifigParts';
 import { DetailsPart } from './DetailsPart';
+import MainOption from "./MainOption";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -49,24 +50,9 @@ const Home = ({ navigation }) => {
       <View>
         <Text style= {Styles.title_Main_Intro}>{'¿Por dónde empezamos?'}</Text>
       </View>
-      <Pressable
-        onPress={() => navigation.navigate('Sets')}
-        style={Styles.option_Main}>
-        <Text style={Styles.title_Main}>Sets</Text>
-        <Text style={Styles.title_Low}>información sobre los sets de lego</Text>
-      </Pressable>
-      <Pressable
-        onPress={() => navigation.navigate('Parts')}
-        style={Styles.option_Main}>
-        <Text style={Styles.title_Main}>Parts</Text>
-        <Text style={Styles.title_Low}>partes de sets de lego</Text>
-      </Pressable>
-      <Pressable
-        onPress={() => navigation.navigate('Minifigs')}
-        style={Styles.option_Main}>
-        <Text style={Styles.title_Main}>Minifigs</Text>
-        <Text style={Styles.title_Low}>información sobre las figuras de lego</Text>
-      </Pressable>
+      <MainOption navigation={navigation} title="Sets" subtitle="información sobre los sets de lego" />
+      <MainOption navigation={navigation} title="Parts" subtitle="partes de sets de lego" />
+      <MainOption navigation={navigation} title="Minifigs" subtitle="información sobre las figuras de lego" />
    </SafeAreaView>
   );
 };
