@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput } from 'react-native';
-import List from './List';
+import ListProducts from "./ListProducts";
 export const SetsMinifig = ({ route }) => {
   const [minifigSet, setMinifigSet] = useState(null);
   const item = route.params.item;
@@ -23,7 +23,7 @@ export const SetsMinifig = ({ route }) => {
   return (
     <View style={Styles.container_Category}>
       {minifigSet && minifigSet.length > 0 ? (
-        <List results={minifigSet} onSearch={setScrollToTop} />
+        <ListProducts results={minifigSet} onSearch={setScrollToTop} productType="product" />
       ) : (
         <Text style={{ textAlign: 'center' }}>
           No existen builds alternativas

@@ -12,7 +12,7 @@ import { newSearch } from './Api';
 
 import Styles from './Styles';
 import Loading from './Loading';
-import List from './List';
+import ListProducts from "./ListProducts";
 
 export const Category_Sets = () => {
   const [results, setResults] = useState([]);
@@ -59,7 +59,7 @@ export const Category_Sets = () => {
         type="text"
       />
       
-      <List results={results} onSearch={setScrollToTop} />
+      <ListProducts results={results} onSearch={setScrollToTop} productType="product" />
       <Text style={Styles.low_text_desplazar}>Desplazate hacia la derecha para ver más</Text>
     </View>
   );

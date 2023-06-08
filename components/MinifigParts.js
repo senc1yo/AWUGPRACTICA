@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput } from 'react-native';
-import ListMinifigsParts from './ListMinifigsParts';
+import ListProducts from "./ListProducts";
 import CircleSVG from '../assets/CircleSVG.jsx';
 export const MinifigParts = ({ route }) => {
   const [minifigPart, setMinifigPart] = useState(null);
@@ -26,7 +26,7 @@ export const MinifigParts = ({ route }) => {
     <CircleSVG style={Styles.bgCircle} />
     <CircleSVG style={Styles.bgCircle2} />
       {minifigPart && minifigPart.length > 0 ? (
-        <ListMinifigsParts results={minifigPart} onSearch={setScrollToTop} />
+        <ListProducts results={minifigPart} onSearch={setScrollToTop} productType="minifigsParts"  />
       ) : (
         <Text style={{ textAlign: 'center' }}>
           No existen datos de las partes

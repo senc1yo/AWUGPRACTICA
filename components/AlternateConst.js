@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput } from 'react-native';
-import ListAlternateBuilds from './ListAlternateBuilds';
+import ListProducts from "./ListProducts";
 export const AlternateConst = ({ route }) => {
   const [altBuilds, setAltBuilds] = useState(null);
   const item = route.params.item;
@@ -23,7 +23,7 @@ export const AlternateConst = ({ route }) => {
   return (
     <View style={Styles.container_Category}>
       {altBuilds && altBuilds.length > 0 ? (
-        <ListAlternateBuilds results={altBuilds} onSearch={setScrollToTop} />
+        <ListProducts results={altBuilds} onSearch={setScrollToTop} productType="alternateBuilds" />
       ) : (
         <Text style={{ textAlign: 'center', fontFamily: 'AmaticSC-Bold', alignSelf: 'center', fontSize: 50, color: '#F4E9DC' }}>
           No existen builds alternativas :(

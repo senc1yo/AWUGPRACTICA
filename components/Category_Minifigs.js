@@ -13,7 +13,7 @@ import { newSearch } from './Api';
 
 import Styles from './Styles'
 import Loading from './Loading'
-import ListMinifigs from './ListMinifigs'
+import ListProducts from './ListProducts'
 import CircleSVG from "../assets/CircleSVG.jsx";
 
 export const Category_Minifigs = () => {
@@ -64,7 +64,7 @@ export const Category_Minifigs = () => {
       <CircleSVG style={Styles.bgCircle} />
         <CircleSVG style={Styles.bgCircle2} />
         </View>
-      <ListMinifigs results = {results}/>
+      <ListProducts results = {results} productType="minifigs"/>
       <Text style={Styles.low_text_desplazar}>Desplazate hacia la derecha para ver más</Text>
     </View>
   );

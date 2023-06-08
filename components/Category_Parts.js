@@ -12,7 +12,7 @@ import { newSearch } from './Api';
 
 import Styles from './Styles';
 import Loading from './Loading';
-import ListParts from './ListParts';
+import ListProducts from "./ListProducts";
 
 export const Category_Parts = () => {
   const [results, setResults] = useState([]);
@@ -56,7 +56,7 @@ export const Category_Parts = () => {
         placeholderTextColor="#F4E9DC"
         type="text"
       />
-      <ListParts results={results} />
+      <ListProducts results={results} productType="productParts" />
       <Text style={Styles.low_text_desplazar}>Desplazate hacia la derecha para ver más</Text>
     </View>
   );
