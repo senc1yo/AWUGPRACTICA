@@ -6,6 +6,12 @@ const Dev_Height = Dimensions.get('window').height;
 const Dev_Width = Dimensions.get('window').width;
 
 export default Styles = StyleSheet.create({
+  text_favoritos: {
+    fontSize: 10,
+    fontFamily: 'AmaticSC-Bold',
+    textAlign: 'center',
+    color: '#F4E9DC',
+  },
   container_App: {
     flex: 1,
     backgroundColor: '#494949',

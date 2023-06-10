@@ -11,6 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 import Styles from './Styles';
 import imagenotfound from '../assets/imagenotfound.jpg';
 import CircleSVG from '../assets/CircleSVG.jsx';
+import AddFavoriteButton from "./AddFavoriteButton";
 export const Details = ({ route }) => {
   console.log(route.params.item);
   const item = route.params.item;
@@ -40,6 +41,7 @@ export const Details = ({ route }) => {
               resizeMode="cover"
             />
           )}
+          <AddFavoriteButton item={item} />
           <Text adjustsFontSizeToFit numberOfLines={2} style={styles.text}>
             Nombre: {item.name}
           </Text>
