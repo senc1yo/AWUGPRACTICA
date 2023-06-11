@@ -5,7 +5,7 @@
     FlatList,
     Dimensions,
 } from 'react-native';
-import { useRef, useEffect } from 'react';
+import {useRef, useEffect, useCallback} from 'react';
 const { width } = Dimensions.get('window');
 
 import Styles from './Styles';
@@ -16,6 +16,10 @@ import ProductParts from "./ProductParts";
 import Product from "./Product";
 
 export default ListProducts = ({ results, onSearch, productType }) => {
+    const onRender = useCallback(() => {
+        console.log("La lista se ha renderizado");
+    }, []);
+
     const flatListRef = useRef(null);
 
     useEffect(() => {
@@ -53,6 +57,7 @@ export default ListProducts = ({ results, onSearch, productType }) => {
             style={Styles.flatList_Category}
             data={results}
             horizontal
+            onRender={onRender}
             snapToAlignment="center"
             decelerationRate={'fast'}
             showsHorizontalScrollIndicator={true}

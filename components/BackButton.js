@@ -1,14 +1,18 @@
 ﻿import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import BackButtonSVG from "../assets/BackButtonSVG";
 
 const BackButton = () => {
     const navigation = useNavigation();
     return (
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-            <BackButtonSVG width={30} height={20}/>
-        </TouchableOpacity>
+        <View style={{ justifyContent: 'center', alignItems: 'center', top: 7 }}>
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+                <BackButtonSVG width={30} height={20}/>
+                <Text style={ {fontFamily: 'AntonRegular', fontSize: 10, alignSelf: "center"}}>Back</Text>
+            </TouchableOpacity>
+            
+        </View>
     );
 };
 

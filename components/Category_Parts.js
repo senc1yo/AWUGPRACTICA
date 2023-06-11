@@ -7,17 +7,19 @@ import {
   Text
 } from 'react-native';
 
-import { useState, useEffect } from 'react';
+import {useState, useEffect, useCallback} from 'react';
 import { newSearch } from './Api';
 
 import Styles from './Styles';
 import Loading from './Loading';
 import ListProducts from "./ListProducts";
+import {useFocusEffect} from "@react-navigation/native";
 
 export const Category_Parts = () => {
   const [results, setResults] = useState([]);
   const [firstLoad, setFirstLoad] = useState(true);
   const [scrollToTop, setScrollToTop] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const search = async (val, page) => {
     const category = '/parts';
@@ -28,10 +30,12 @@ export const Category_Parts = () => {
     if (page) {
       q.page = page;
     }
+    if (!firstLoad){setLoading(true);}
 
     const items = await newSearch(category, q);
 
     setResults(items);
+    setLoading(false);
 
     if (scrollToTop) {
       scrollToTop();
@@ -45,19 +49,30 @@ export const Category_Parts = () => {
       setFirstLoad(false);
     }
   }, [firstLoad]);
-  if (!results) <Loading />;
-
+  useFocusEffect(
+      useCallback(() => {
+        setFirstLoad(true);
+      }, [])
+  );
   return (
-    <View style={Styles.container_Category}>
-      <TextInput
-        style={Styles.box_Category}
-        onChangeText={(newText) => search(newText)}
-        placeholder="Buscar"
-        placeholderTextColor="#F4E9DC"
-        type="text"
-      />
-      <ListProducts results={results} productType="productParts" />
-      <Text style={Styles.low_text_desplazar}>Desplazate hacia la derecha para ver más</Text>
-    </View>
+      <View style={Styles.container_Category}>
+        {loading && firstLoad ? (
+            <Loading/>
+        ) : (
+            <>
+              <TextInput
+                  style={Styles.box_Category}
+                  onChangeText={(newText) => search(newText)}
+                  placeholder="Buscar"
+                  placeholderTextColor="#F4E9DC"
+                  type="text"
+              />
+              <ListProducts results={results} productType="productParts" />
+              <Text style={Styles.low_text_desplazar}>
+                Desplazate hacia la derecha para ver más
+              </Text>
+            </>
+        )}
+      </View>
   );
 };

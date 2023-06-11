@@ -5,10 +5,15 @@ import {
   SafeAreaView,
   View,
   Text,
-  Image,
+  Image, Dimensions,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from 'react-native-vector-icons';
+
+import CardHolder from "../assets/CardHolder";
+
+const Dev_Height = Dimensions.get('window').height;
+const Dev_Width = Dimensions.get('window').width;
 
 import Styles from './Styles';
 import SvgComponent from '../assets/SvgComponent.jsx';
@@ -24,51 +29,34 @@ const ProductParts = ({ item }) => {
   };
 
   return (
-    <Pressable onPress={handlePress}>
-      <SafeAreaView style={Styles.contanier}>
-        <View style={Styles.upper_text_view}>
-          <Text style={Styles.low_text}>LEGO PART</Text>
-          <AntDesign name="" size={24} style={Styles.cardName} />
-          <Text style={Styles.name_of_song_Text1}>{item.year}</Text>
-        </View>
-
-        <View style={Styles.middle_text_view}>
-          <Text
-            adjustsFontSizeToFit
-            numberOfLines={1}
-            style={Styles.theme_name}>
-            {item.name}
-          </Text>
-        </View>
-
-        <View style={Styles.middlebar}>
-          <LogoLego style={Styles.frameLogo} />
-          <SvgComponent style={Styles.frameImage} />
-
+      <View style={{flexDirection: 'column', width: Dev_Width, height: Dev_Height / 2, top: Dev_Height * 0.15}}>
+        <Pressable onPress={handlePress}>
+          <CardHolder style={Styles.frameImage} />
           {item.part_img_url ? (
-            <Image
-              style={Styles.illustrationImage}
-              source={{ uri: item.part_img_url }}
-              resizeMode="cover"
-            />
+              <Image
+                  style={Styles.illustrationImage}
+                  source={{ uri: item.part_img_url }}
+                  resizeMode="cover"
+              />
           ) : (
-            <Image
-              style={Styles.illustrationImage}
-              source={imagenotfound}
-              resizeMode="cover"
-            />
+              <Image
+                  style={Styles.illustrationImage}
+                  source={imagenotfound}
+                  resizeMode="cover"
+              />
           )}
-        </View>
-        <View style={Styles.bot_text_view}>
-          <Text
-            adjustsFontSizeToFit
-            numberOfLines={1}
-            style={Styles.theme_name}>
-            {item.part_num}
-          </Text>
-        </View>
-      </SafeAreaView>
-    </Pressable>
+          <View style={{position: "absolute", top: "5%", marginLeft: "15%", width: Dev_Width * 0.6, zIndex: 2, flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+            <Text style={{textAlign: 'left', textAlignVertical: 'top', zIndex: 2, fontFamily:'AntonRegular',fontSize: 12, color: 'red'}}>Parte</Text>
+            <Text style={{textAlign: 'right', textAlignVertical: 'top', zIndex: 2, fontFamily:'AntonRegular',fontSize: 12, color: 'red'}}>{item.year}</Text>
+          </View>
+          <View style={{position: "absolute", top: 57, marginLeft: 50, zIndex:2, height: 50, flexDirection: 'row', justifyContent: 'flex-start', flexWrap: 'wrap'}}>
+            <Text style={{textAlign: 'left', maxWidth: 190, height: 30, fontFamily:'AntonRegular',fontSize: 30, color: 'black'}} adjustsFontSizeToFit numberOfLines={1}>{item.name}</Text>
+          </View>
+          <View style={{position: "absolute", top: "87%", alignSelf: 'center', zIndex: 2, flexDirection: 'row', justifyContent: 'center'}}>
+            <Text style={{textAlign: 'center', textAlignVertical: 'bottom', fontFamily:'AntonRegular',fontSize: 12, color:'#000000'}}>{item.set_num}</Text>
+          </View>
+        </Pressable>
+      </View>
   );
 };
 export default ProductParts;

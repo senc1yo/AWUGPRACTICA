@@ -22,7 +22,7 @@ const Product = ({ item }) => {
     useEffect(() => {
         fetch(`https://rebrickable.com/api/v3/lego/themes/${item.theme_id}/`, {
             headers: {
-                Authorization: 'key 01e5a15acdb513d68569b8f03d12fcf5',
+                Authorization: 'key 59fb97e709c9d9d94e40c5c62c838337',
             },
         })
             .then((response) => response.json())

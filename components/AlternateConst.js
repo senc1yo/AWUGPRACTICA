@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import ListProducts from "./ListProducts";
+import Loading from "./Loading";
+
 export const AlternateConst = ({ route }) => {
   const [altBuilds, setAltBuilds] = useState(null);
   const item = route.params.item;
@@ -11,7 +13,7 @@ export const AlternateConst = ({ route }) => {
       `https://rebrickable.com/api/v3/lego/sets/${item.set_num}/alternates/`,
       {
         headers: {
-          Authorization: 'key 01e5a15acdb513d68569b8f03d12fcf5',
+          Authorization: 'key 59fb97e709c9d9d94e40c5c62c838337',
         },
       }
     )
@@ -20,17 +22,33 @@ export const AlternateConst = ({ route }) => {
       .catch((error) => console.error(error));
   }, [item.set_num]);
 
-  return (
-    <View style={Styles.container_Category}>
-      {altBuilds && altBuilds.length > 0 ? (
-        <ListProducts results={altBuilds} onSearch={setScrollToTop} productType="alternateBuilds" />
-      ) : (
-        <Text style={{ textAlign: 'center', fontFamily: 'AntonRegular', alignSelf: 'center', fontSize: 50, color: '#F4E9DC' }}>
-          No existen builds alternativas :(
-        </Text>
-      )}
-    </View>
-  );
+    return (
+        <View style={Styles.container_Category}>
+            {altBuilds ? (
+                altBuilds.length > 0 ? (
+                    <ListProducts
+                        results={altBuilds}
+                        onSearch={setScrollToTop}
+                        productType="alternateBuilds"
+                    />
+                ) : (
+                    <Text
+                        style={{
+                            textAlign: 'center',
+                            fontFamily: 'AntonRegular',
+                            alignSelf: 'center',
+                            fontSize: 50,
+                            color: '#F4E9DC',
+                        }}>
+                        No existen builds alternativas :(
+                    </Text>
+                )
+            ) : (
+                <Loading/>
+            )}
+        </View>
+    );
+
 };
 
 export default AlternateConst;
