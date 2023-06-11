@@ -10,7 +10,6 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import Styles from './Styles';
 import imagenotfound from '../assets/imagenotfound.jpg';
-import CircleSVG from '../assets/CircleSVG.jsx';
 export const DetailsPart = ({ route }) => {
   console.log(route.params.item);
   const item = route.params.item;
@@ -23,10 +22,7 @@ export const DetailsPart = ({ route }) => {
 
   return (
     <SafeAreaView style={Styles.container_Main}>
-      <View style={styles.container}>
-        <CircleSVG style={Styles.bgCircle} />
-        <CircleSVG style={Styles.bgCircle2} />
-        
+      <View style={styles.container}>        
         <View style={Styles.detailsCard}>
         <Text style={styles.textTitle}>Información de la parte:</Text>
           {item.part_img_url ? (
@@ -79,13 +75,13 @@ const styles = StyleSheet.create({
   },
   text: {
     position: 'relative',
-    fontFamily: 'AmaticSC-Bold',
+    fontFamily: 'AntonRegular',
     fontSize: 20,
     textAlign: 'center',
   },
   textTitle: {
     position: 'relative',
-    fontFamily: 'AmaticSC-Bold',
+    fontFamily: 'AntonRegular',
     fontSize: 30,
     textAlign: 'center',
     color: '#E85E56'

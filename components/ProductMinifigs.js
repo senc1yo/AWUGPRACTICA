@@ -14,7 +14,6 @@ import Styles from './Styles';
 import SvgComponent from '../assets/SvgComponent.jsx';
 import LogoLego from '../assets/LogoLego.jsx';
 import imagenotfound from '../assets/imagenotfound.jpg'; // Importa la imagen local
-import CabezasVisual from '../assets/CabezasVisual.jsx'
 const ProductMinifigs = ({ item }) => {
   const navigation = useNavigation();
 

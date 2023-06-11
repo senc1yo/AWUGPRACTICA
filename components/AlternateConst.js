@@ -25,7 +25,7 @@ export const AlternateConst = ({ route }) => {
       {altBuilds && altBuilds.length > 0 ? (
         <ListProducts results={altBuilds} onSearch={setScrollToTop} productType="alternateBuilds" />
       ) : (
-        <Text style={{ textAlign: 'center', fontFamily: 'AmaticSC-Bold', alignSelf: 'center', fontSize: 50, color: '#F4E9DC' }}>
+        <Text style={{ textAlign: 'center', fontFamily: 'AntonRegular', alignSelf: 'center', fontSize: 50, color: '#F4E9DC' }}>
           No existen builds alternativas :(
         </Text>
       )}

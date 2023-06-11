@@ -8,18 +8,18 @@ const Dev_Width = Dimensions.get('window').width;
 export default Styles = StyleSheet.create({
   text_favoritos: {
     fontSize: 10,
-    fontFamily: 'AmaticSC-Bold',
+    fontFamily: 'AntonRegular',
     textAlign: 'center',
     color: '#F4E9DC',
   },
   container_App: {
     flex: 1,
-    backgroundColor: '#494949',
+    backgroundColor: '#3B5BA5',
     //padding: 8,
   },
   container_Main: {
     flex: 1,
-    backgroundColor: '#494949',
+    backgroundColor: '#3B5BA5',
 
   },
   icon_App: {
@@ -27,8 +27,6 @@ export default Styles = StyleSheet.create({
     width: '15%',
   },
   option_Main: {
-    justifyContent: 'space-evenly',
-    backgroundColor: '#F4E9DC',
     borderRadius: 25,
     height: '25%',
     margin: 10,
@@ -44,27 +42,29 @@ export default Styles = StyleSheet.create({
   },
   title_Main: {
     fontSize: 50,
-    fontFamily: 'AmaticSC-Bold',
-    textAlign: 'center',
+    fontFamily: 'AntonRegular',
+    zIndex: 3,
+    textAlign: 'left',
     color: '#494949',
   },
   title_Main_Intro: {
     fontSize: 30,
-    fontFamily: 'AmaticSC-Bold',
+    fontFamily: 'AntonRegular',
     textAlign: 'left',
     color: '#F4E9DC',
     padding: 20,
   },
   title_Low: {
     fontSize: 15,
-    fontFamily: 'AmaticSC-Regular',
-    textAlign: 'center',
+    fontFamily: 'AntonRegular',
+    textAlign: 'left',
+    zIndex: 3,
     color: '#494949',
   },
 
   container_Category: {
     flex: 1,
-    backgroundColor: '#494949',
+    backgroundColor: '#3B5BA5',
   },
   fondoCircle: {
     backgroundColor: '#494949',
@@ -72,7 +72,7 @@ export default Styles = StyleSheet.create({
    
   },
   flatList_Category: {
-    backgroundColor: '#494949',
+    backgroundColor: '#3B5BA5',
     paddingLeft: 10
     //alignItems: 'center'
   },
@@ -80,7 +80,7 @@ export default Styles = StyleSheet.create({
     width: 20,
   },
   box_Category: {
-    backgroundColor: '#494949',
+    backgroundColor: '#3B5BA5',
     borderWidth: 2,
     borderColor: '#F4E9DC',
     borderRadius: 20,
@@ -88,7 +88,7 @@ export default Styles = StyleSheet.create({
     marginBottom: 5,
     color: '#F4E9DC',
     paddingHorizontal: 20,
-    fontFamily: 'AmaticSC-Bold',
+    fontFamily: 'AntonRegular',
     fontSize: 40,
   },
   loading_Category: {
@@ -106,7 +106,7 @@ export default Styles = StyleSheet.create({
   },
   title_Product: {
     fontSize: 30,
-    fontFamily: 'AmaticSC-Bold',
+    fontFamily: 'AntonRegular',
     textAlign: 'center',
   },
   img_Product: {
@@ -132,28 +132,28 @@ export default Styles = StyleSheet.create({
   },
 
   theme_name: {
-    fontSize: 70,
+    fontSize: 30,
     textAlign: 'center',
-    fontFamily: 'AmaticSC-Bold',
+    fontFamily: 'AntonRegular',
     marginLeft: '-5%',
     maxWidth: Dev_Width * 0.9,
     textAlignVertical: 'center',
   },
   low_text: {
     fontSize: 15,
-    fontFamily: 'AmaticSC-Regular',
+    fontFamily: 'AntonRegular',
     marginLeft: '-5%',
   },
   low_text_desplazar: {
     fontSize: 15,
-    fontFamily: 'AmaticSC-Regular',
+    fontFamily: 'AntonRegular',
     alignSelf: 'center',
     justifyContent: 'center',
     color: '#F4E9DC'
   },
   frameImage: {
     position: 'relative',
-    width: '130%',
+    width: '100%',
     height: '100%',
     zIndex: 1,
   },
@@ -196,9 +196,10 @@ export default Styles = StyleSheet.create({
   illustrationImage: {
     position: 'absolute',
     alignSelf: 'center',
-    top: '25%',
-    width: '115%',
-    height: '50%',
+    top: Dev_Height * 0.1,
+    left: Dev_Width * 0.1,
+    width: Dev_Width * 0.75,
+    height: Dev_Height * 0.35,
   },
   upper_text_view: {
     position: 'absolute',
@@ -243,7 +244,7 @@ export default Styles = StyleSheet.create({
   name_of_song_Text1: {
     fontSize: 15,
     textAlign: 'right',
-    fontFamily: 'AmaticSC-Regular',
+    fontFamily: 'AntonRegular',
     adjustsFontSizeToFit: true,
   },
   cardName: {

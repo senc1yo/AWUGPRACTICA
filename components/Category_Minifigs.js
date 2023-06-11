@@ -14,7 +14,6 @@ import { newSearch } from './Api';
 import Styles from './Styles'
 import Loading from './Loading'
 import ListProducts from './ListProducts'
-import CircleSVG from "../assets/CircleSVG.jsx";
 
 export const Category_Minifigs = () => {
 

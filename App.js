@@ -2,12 +2,12 @@ import { View} from 'react-native';
 import Main from './components/Main'
 import Styles from './components/Styles'
 import { useFonts } from 'expo-font';
-import { AmaticSC_400Regular, AmaticSC_700Bold } from '@expo-google-fonts/amatic-sc';
+import { Anton_400Regular } from '@expo-google-fonts/anton';
+
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    'AmaticSC-Regular': AmaticSC_400Regular,
-    'AmaticSC-Bold': AmaticSC_700Bold,
+    'AntonRegular': Anton_400Regular,
   });
 
   if (!fontsLoaded) {

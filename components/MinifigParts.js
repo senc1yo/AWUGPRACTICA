@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import ListProducts from "./ListProducts";
 import Styles from './Styles';
-import CircleSVG from '../assets/CircleSVG.jsx';
 export const MinifigParts = ({ route }) => {
   const [minifigPart, setMinifigPart] = useState(null);
   const item = route.params.item;
@@ -24,8 +23,6 @@ export const MinifigParts = ({ route }) => {
 
   return (
     <View style={Styles.container_Category}>
-    <CircleSVG style={Styles.bgCircle} />
-    <CircleSVG style={Styles.bgCircle2} />
       {minifigPart && minifigPart.length > 0 ? (
         <ListProducts results={minifigPart} onSearch={setScrollToTop} productType="minifigsParts"  />
       ) : (

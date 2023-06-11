@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, Pressable, SafeAreaView, Image } from 'react-na
 import { useNavigation } from '@react-navigation/native';
 import Styles from './Styles';
 import imagenotfound from '../assets/imagenotfound.jpg'
-import CircleSVG from '../assets/CircleSVG.jsx';
 export const DetailsMinifig = ({ route }) => {
   console.log(route.params.item);
   const item = route.params.item;
@@ -21,8 +20,6 @@ export const DetailsMinifig = ({ route }) => {
   return (
     <SafeAreaView style={Styles.container_Main}>
       <View style={styles.container}>
-      <CircleSVG style={Styles.bgCircle} />
-        <CircleSVG style={Styles.bgCircle2} />
         <View style={Styles.detailsCard}>
           {item.set_img_url ? (
             <Image
@@ -82,7 +79,7 @@ const styles = StyleSheet.create({
   },
   text: {
     position: 'relative',
-    fontFamily: 'AmaticSC-Bold',
+    fontFamily: 'AntonRegular',
     fontSize: 20,
     textAlign: 'center',
   },

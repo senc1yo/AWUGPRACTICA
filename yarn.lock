@@ -1091,6 +1091,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/amatic-sc/-/amatic-sc-0.2.3.tgz#00b353b58c42315a9c5248f288c76ebc15ec8a35"
   integrity sha512-6fGot7aV2IhTijktewelFscSKyA//2w3unhWbpEO/C3Stc0jNM4VsOGV8l5gTf79nwQ6kEKEzRybcRukRmH1vQ==
 
+"@expo-google-fonts/anton@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/anton/-/anton-0.2.3.tgz#babfcd675ad6a0c74ab12aa48957b6654fa6fa71"
+  integrity sha512-hof38Sb+7XpsiZxTZ6J4n/2XOdNcZbFaQe+bRk5T3zKNYUKSxPBFyV/4LAC+nfxSjf1yyKtZcR/gPid/bpscQA==
+
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.0.tgz#be0c1de943c7987a9fbd309ea0b1acd605890c7b"
