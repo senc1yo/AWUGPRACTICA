@@ -1096,6 +1096,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/anton/-/anton-0.2.3.tgz#babfcd675ad6a0c74ab12aa48957b6654fa6fa71"
   integrity sha512-hof38Sb+7XpsiZxTZ6J4n/2XOdNcZbFaQe+bRk5T3zKNYUKSxPBFyV/4LAC+nfxSjf1yyKtZcR/gPid/bpscQA==
 
+"@expo-google-fonts/dosis@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/dosis/-/dosis-0.2.3.tgz#2c0fe20bb05498784bd6777423c283d5819f91a2"
+  integrity sha512-JT9bHEhYBMKTDdGmlSzLA8WgctoHizksa1CePdUuHSLyBmHEAwdh5cXEMDwRANNXpaJ521tR6rV7BftZ6ztRnw==
+
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.0.tgz#be0c1de943c7987a9fbd309ea0b1acd605890c7b"
