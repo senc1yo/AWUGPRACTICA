@@ -8,14 +8,10 @@ import {
   Image,
   Linking, Dimensions
 } from 'react-native';
-import { AntDesign } from 'react-native-vector-icons';
 
 import Styles from './Styles';
-import SvgComponent from '../assets/SvgComponent.jsx';
-import LogoLego from '../assets/LogoLego.jsx';
 import imagenotfound from '../assets/imagenotfound.jpg';
 import CardHolder from "../assets/CardHolder";
-import {useNavigation} from "@react-navigation/native"; // Importa la imagen local
 
 const Dev_Height = Dimensions.get('window').height;
 const Dev_Width = Dimensions.get('window').width;

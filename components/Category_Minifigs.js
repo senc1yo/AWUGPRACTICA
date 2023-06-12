@@ -11,9 +11,9 @@ import {
 import {useState, useEffect, useCallback} from 'react';
 import { newSearch } from './Api';
 
-import Styles from './Styles'
-import Loading from './Loading'
-import ListProducts from './ListProducts'
+import Styles from './Styles';
+import Loading from './Loading';
+import ListProducts from "./ListProducts";
 import {useFocusEffect} from "@react-navigation/native";
 
 export const Category_Minifigs = () => {

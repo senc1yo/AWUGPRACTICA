@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    backgroundColor: '#494949',
+    backgroundColor: '#3B5BA5',
   },
   imageDet: {
     position: 'relative',

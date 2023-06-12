@@ -42,11 +42,11 @@ const ProductMinifigsParts = ({ item }) => {
                   resizeMode="cover"
               />
           )}
-          <View style={{position: "absolute", top: "5%", marginLeft: "15%", width: Dev_Width * 0.6, zIndex: 2, flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+          <View style={{position: "absolute", top: "2%", marginLeft: "15%", width: Dev_Width * 0.6, zIndex: 2, flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
             <Text style={{textAlign: 'right', textAlignVertical: 'top', zIndex: 2, fontFamily:'AntonRegular',fontSize: 12, color: 'red'}}>{item.part.year_from}</Text>
           </View>
-          <View style={{position: "absolute", top: 57, marginLeft: 50, zIndex:2, height: 50, flexDirection: 'row', justifyContent: 'flex-start', flexWrap: 'wrap'}}>
-            <Text style={{textAlign: 'left', maxWidth: 190, height: 30, fontFamily:'AntonRegular',fontSize: 30, color: 'black'}} adjustsFontSizeToFit numberOfLines={1}>{item.part.name}</Text>
+          <View style={{position: "absolute", top: 55, marginLeft: 50, zIndex:2, height: 50, flexDirection: 'row', justifyContent: 'flex-start', flexWrap: 'wrap'}}>
+            <Text style={{textAlign: 'left', maxWidth: Dev_Width -20, height: 30, fontFamily:'AntonRegular',fontSize: 30, color: 'black'}} adjustsFontSizeToFit numberOfLines={1}>{item.name}</Text>
           </View>
           <View style={{position: "absolute", top: "87%", alignSelf: 'center', zIndex: 2, flexDirection: 'row', justifyContent: 'center'}}>
             <Text style={{textAlign: 'center', textAlignVertical: 'bottom', fontFamily:'AntonRegular',fontSize: 12, color:'#000000'}}>{item.set_num}</Text>

@@ -41,7 +41,7 @@ export const DetailsPart = ({ route }) => {
           <Text adjustsFontSizeToFit numberOfLines={2} style={styles.text}>
             Nombre: {item.name}
           </Text>
-          <Text style={styles.text}>Nº de part: {item.part_num}</Text>
+          <Text style={styles.text}>Nº Serie de parte: {item.part_num}</Text>
         </View>
       </View>
     </SafeAreaView>

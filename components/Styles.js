@@ -10,6 +10,7 @@ export default Styles = StyleSheet.create({
     fontSize: 10,
     fontFamily: 'AntonRegular',
     textAlign: 'center',
+    left: -5,
     color: '#F4E9DC',
   },
   container_App: {

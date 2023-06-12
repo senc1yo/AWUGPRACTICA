@@ -8,12 +8,9 @@ import {
   Image, Dimensions,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { AntDesign } from 'react-native-vector-icons';
-import CardHolder from "../assets/CardHolder";
 import Styles from './Styles';
-import SvgComponent from '../assets/SvgComponent.jsx';
-import LogoLego from '../assets/LogoLego.jsx';
 import imagenotfound from '../assets/imagenotfound.jpg';
+import CardYellow from "../assets/CardYellow";
 const Dev_Height = Dimensions.get('window').height;
 const Dev_Width = Dimensions.get('window').width;
 
@@ -40,7 +37,7 @@ const ProductMinifigs = ({ item }) => {
 
       <View style={{flexDirection: 'column', width: Dev_Width, height: Dev_Height / 2, top: Dev_Height * 0.15}}>
         <Pressable onPress={handlePress}>
-          <CardHolder style={Styles.frameImage} />
+          <CardYellow style={Styles.frameImage} />
           {item.set_img_url ? (
               <Image
                   style={Styles.illustrationImage}
@@ -54,12 +51,12 @@ const ProductMinifigs = ({ item }) => {
                   resizeMode="cover"
               />
           )}
-          <View style={{position: "absolute", top: "5%", marginLeft: "15%", width: Dev_Width * 0.6, zIndex: 2, flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
-            <Text style={{textAlign: 'left', textAlignVertical: 'top', zIndex: 2, fontFamily:'AntonRegular',fontSize: 12, color: 'red'}}>{themeName}</Text>
-            <Text style={{textAlign: 'right', textAlignVertical: 'top', zIndex: 2, fontFamily:'AntonRegular',fontSize: 12, color: 'red'}}>{item.num_parts}</Text>
+          <View style={{position: "absolute", top: "2%", marginLeft: "12%", width: Dev_Width * 0.6, zIndex: 2, flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
+            <Text style={{textAlign: 'left', textAlignVertical: 'top', zIndex: 2, fontFamily:'AntonRegular',fontSize: 12, color: 'black'}}>{themeName}</Text>
+            <Text style={{textAlign: 'right', textAlignVertical: 'top', zIndex: 2, fontFamily:'AntonRegular',fontSize: 12, color: 'black'}}>Número de partes: {item.num_parts}</Text>
           </View>
-          <View style={{position: "absolute", top: 57, marginLeft: 50, zIndex:2, height: 50, flexDirection: 'row', justifyContent: 'flex-start', flexWrap: 'wrap'}}>
-            <Text style={{textAlign: 'left', maxWidth: 190, height: 30, fontFamily:'AntonRegular',fontSize: 30, color: 'black'}} adjustsFontSizeToFit numberOfLines={1}>{item.name}</Text>
+          <View style={{position: "absolute", top: 47, marginLeft: 50, maxWidth: Dev_Width -130, zIndex:2, height: 50, flexDirection: 'row', justifyContent: 'flex-start', flexWrap: 'wrap'}}>
+            <Text style={{textAlign: 'left', height: 30, maxWidth: Dev_Width -130, fontFamily:'AntonRegular',fontSize: 30, color: 'black'}} adjustsFontSizeToFit numberOfLines={2}>{item.name}</Text>
           </View>
           <View style={{position: "absolute", top: "87%", alignSelf: 'center', zIndex: 2, flexDirection: 'row', justifyContent: 'center'}}>
             <Text style={{textAlign: 'center', textAlignVertical: 'bottom', fontFamily:'AntonRegular',fontSize: 12, color:'#000000'}}>{item.set_num}</Text>

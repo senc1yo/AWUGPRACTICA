@@ -2,9 +2,7 @@
 import Styles from './Styles';
 
 export default MainOption = ({ navigation, title, subtitle }) => {
-    // Aquí declaras una variable para guardar la imagen
     let image;
-    // Aquí usas un switch para asignar la imagen según el título
     switch (title) {
         case "Sets":
             image = require("../assets/SetsNavigation.png");
