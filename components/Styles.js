@@ -14,7 +14,7 @@ export default Styles = StyleSheet.create({
   },
   container_App: {
     flex: 1,
-    backgroundColor: '#3B5BA5',
+    backgroundColor: '#4d2f93',
     //padding: 8,
   },
   container_Main: {
@@ -24,7 +24,7 @@ export default Styles = StyleSheet.create({
   },
   icon_App: {
     position: 'relative',
-    width: '15%',
+    left: 10
   },
   option_Main: {
     borderRadius: 25,
@@ -80,13 +80,12 @@ export default Styles = StyleSheet.create({
     width: 20,
   },
   box_Category: {
-    backgroundColor: '#3B5BA5',
+    backgroundColor: '#ff3333',
     borderWidth: 2,
-    borderColor: '#F4E9DC',
-    borderRadius: 20,
+    borderColor: 'yellow',
     padding: 4,
     marginBottom: 5,
-    color: '#F4E9DC',
+    color: 'black',
     paddingHorizontal: 20,
     fontFamily: 'AntonRegular',
     fontSize: 40,

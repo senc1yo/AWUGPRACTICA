@@ -17,6 +17,7 @@ import Styles from './Styles';
 import FavsButton from "./Funcionality/FavsButton";
 import BackButton from "./Funcionality/BackButton"
 import RectangleTitleNav from "../assets/RectangleTitleNav";
+import IconApp from '../assets/iconApp';
 
 const Stack = createStackNavigator();
 
@@ -37,11 +38,14 @@ export default Main = () => {
                     headerShown: true,
                     headerTitleStyle: {fontFamily: 'AntonRegular', fontSize: 30, color: '#000'},
                     headerStyle:{backgroundColor: "#3B5BA5"},
+                    headerLeft: () => (
+                            <IconApp width={40} height={40} style={Styles.icon_App}/>
+                    ),
                     headerRight: () => (
                         <FavsButton navigation={navigation} onPress={() => navigation.navigate("FavoritesSets")} />
                     ),
                 })}>
-                <Stack.Screen name="Home" component={Home} />
+                <Stack.Screen name="Home" component={Home} options={{ title: "" }} />
                 <Stack.Screen name="Sets" component={Category_Sets} options={({ navigation }) => ({ title: "Sets de Lego",  headerTitleAlign: 'center', headerBackground: () => (
                 <View style={{ justifyContent: 'center', alignItems: 'center', top: 40 }}>
                         <RectangleTitleNav width={200} height={40}/>

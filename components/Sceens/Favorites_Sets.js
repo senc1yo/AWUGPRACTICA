@@ -61,7 +61,7 @@ export const Favorites_Sets = () => {
                     filterFavorites(newText); // Llamar a la función de filtrado con el texto
                 }}
                 placeholder="Buscar"
-                placeholderTextColor="#F4E9DC"
+                placeholderTextColor="black"
                 type="text"
             />
 

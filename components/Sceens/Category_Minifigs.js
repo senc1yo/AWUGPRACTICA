@@ -65,7 +65,7 @@ export const Category_Minifigs = () => {
                         style={Styles.box_Category}
                         onChangeText={(newText) => search(newText)}
                         placeholder="Buscar"
-                        placeholderTextColor="#F4E9DC"
+                        placeholderTextColor="black"
                         type="text"
                     />
                     <ListProducts results={results} productType="minifigs" />
