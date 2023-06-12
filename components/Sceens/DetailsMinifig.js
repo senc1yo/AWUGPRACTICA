@@ -1,24 +1,21 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  SafeAreaView,
-  Image,
-} from 'react-native';
+import { View, Text, StyleSheet, Pressable, SafeAreaView, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Styles from './Styles';
-import imagenotfound from '../assets/imagenotfound.jpg';
-import AddFavoriteButton from "./AddFavoriteButton";
-export const Details = ({ route }) => {
+import Styles from '../Styles';
+import imagenotfound from '../../assets/imagenotfound.jpg'
+import AddFavoriteButton from "../Funcionality/AddFavoriteButton";
+export const DetailsMinifig = ({ route }) => {
   console.log(route.params.item);
   const item = route.params.item;
   const navigation = useNavigation();
 
-  const handlePress = () => {
+  const handlePressSets = () => {
     console.log(item);
-    navigation.navigate('AlternateConst', { item: item });
+    navigation.navigate('SetsMinifig', { item: item });
+  };
+  const handlePressParts = () => {
+    console.log(item);
+    navigation.navigate('MinifigParts', { item: item });
   };
 
   return (
@@ -38,18 +35,20 @@ export const Details = ({ route }) => {
               resizeMode="cover"
             />
           )}
-          <AddFavoriteButton item={item} />
-          <Text adjustsFontSizeToFit numberOfLines={2} style={styles.text}>
-            Nombre: {item.name}
-          </Text>
-          <Text style={styles.text}>Nº de set: {item.set_num}</Text>
-          <Text style={styles.text}>Año: {item.year}</Text>
-          <Text style={styles.text}>Número de partes: {item.num_parts}</Text>
-          <Pressable onPress={handlePress}>
-            <View style={[styles.altContainer, { justifyContent: 'center' }]}>
-              <Text style={styles.text}>Construcciones alternativas</Text>
-            </View>
-          </Pressable>
+        <AddFavoriteButton item={item} />
+        <Text style={styles.text}>Nombre: {item.name}</Text>
+        <Text style={styles.text}>Nº de set: {item.set_num}</Text>
+        <Text style={styles.text}>Número de partes: {item.num_parts}</Text>
+        <Pressable onPress={handlePressSets}>
+          <View style={[styles.altContainer, { justifyContent: 'center' }]}>
+            <Text style={styles.text}>Sets en los que aparece</Text>
+          </View>
+        </Pressable>
+        <Pressable onPress={handlePressParts}>
+          <View style={[styles.altContainer, { justifyContent: 'center' }]}>
+            <Text style={styles.text}>Partes del minifig</Text>
+          </View>
+        </Pressable>
         </View>
       </View>
     </SafeAreaView>
@@ -61,14 +60,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    backgroundColor: '#494949',
+    backgroundColor: '#3B5BA5',
   },
   imageDet: {
     position: 'relative',
     width: 200,
     height: 200,
     borderRadius: 25,
-    
     justifyContent: 'center',
     alignSelf: 'center',
   },
@@ -89,4 +87,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Details;
+export default DetailsMinifig;

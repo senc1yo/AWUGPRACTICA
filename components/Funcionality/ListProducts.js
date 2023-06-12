@@ -8,12 +8,12 @@
 import {useRef, useEffect, useCallback} from 'react';
 const { width } = Dimensions.get('window');
 
-import Styles from './Styles';
-import ProductMinifigs from './ProductMinifigs';
-import ProductMinifigsParts from './ProductMinifigsParts';
-import ProductAlternateBuilds from './ProductAlternateBuilds';
-import ProductParts from "./ProductParts";
-import Product from "./Product";
+import Styles from '../Styles';
+import ProductMinifigs from '../ProductMinifigs';
+import ProductMinifigsParts from '../ProductMinifigsParts';
+import ProductAlternateBuilds from '../ProductAlternateBuilds';
+import ProductParts from "../ProductParts";
+import Product from "../Product";
 
 export default ListProducts = ({ results, onSearch, productType }) => {
     const onRender = useCallback(() => {

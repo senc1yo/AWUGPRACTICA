@@ -8,27 +8,27 @@ import {
   Image,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Styles from './Styles';
-import imagenotfound from '../assets/imagenotfound.jpg';
-export const DetailsPart = ({ route }) => {
+import Styles from '../Styles';
+import imagenotfound from '../../assets/imagenotfound.jpg';
+import AddFavoriteButton from "../Funcionality/AddFavoriteButton";
+export const Details = ({ route }) => {
   console.log(route.params.item);
   const item = route.params.item;
   const navigation = useNavigation();
 
   const handlePress = () => {
     console.log(item);
-    navigation.navigate('SetsPart', { item: item });
+    navigation.navigate('AlternateConst', { item: item });
   };
 
   return (
     <SafeAreaView style={Styles.container_Main}>
-      <View style={styles.container}>        
+      <View style={styles.container}>
         <View style={Styles.detailsCard}>
-        <Text style={styles.textTitle}>Información de la parte:</Text>
-          {item.part_img_url ? (
+          {item.set_img_url ? (
             <Image
               style={styles.imageDet}
-              source={{ uri: item.part_img_url }}
+              source={{ uri: item.set_img_url }}
               resizeMode="cover"
             />
           ) : (
@@ -38,10 +38,18 @@ export const DetailsPart = ({ route }) => {
               resizeMode="cover"
             />
           )}
+          <AddFavoriteButton item={item} />
           <Text adjustsFontSizeToFit numberOfLines={2} style={styles.text}>
             Nombre: {item.name}
           </Text>
-          <Text style={styles.text}>Nº Serie de parte: {item.part_num}</Text>
+          <Text style={styles.text}>Nº de set: {item.set_num}</Text>
+          <Text style={styles.text}>Año: {item.year}</Text>
+          <Text style={styles.text}>Número de partes: {item.num_parts}</Text>
+          <Pressable onPress={handlePress}>
+            <View style={[styles.altContainer, { justifyContent: 'center' }]}>
+              <Text style={styles.text}>Construcciones alternativas</Text>
+            </View>
+          </Pressable>
         </View>
       </View>
     </SafeAreaView>
@@ -53,7 +61,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    backgroundColor: '#494949',
+    backgroundColor: '#3B5BA5',
   },
   imageDet: {
     position: 'relative',
@@ -76,16 +84,9 @@ const styles = StyleSheet.create({
   text: {
     position: 'relative',
     fontFamily: 'AntonRegular',
-    fontSize: 20,
+    fontSize: 15,
     textAlign: 'center',
-  },
-  textTitle: {
-    position: 'relative',
-    fontFamily: 'AntonRegular',
-    fontSize: 30,
-    textAlign: 'center',
-    color: '#E85E56'
   },
 });
 
-export default DetailsPart;
+export default Details;

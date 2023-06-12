@@ -7,11 +7,10 @@ const Dev_Width = Dimensions.get('window').width;
 
 export default Styles = StyleSheet.create({
   text_favoritos: {
-    fontSize: 10,
+    fontSize: 8,
     fontFamily: 'AntonRegular',
     textAlign: 'center',
-    left: -5,
-    color: '#F4E9DC',
+    color: '#fbe413',
   },
   container_App: {
     flex: 1,
@@ -46,21 +45,21 @@ export default Styles = StyleSheet.create({
     fontFamily: 'AntonRegular',
     zIndex: 3,
     textAlign: 'left',
-    color: '#494949',
+    color: 'black',
   },
   title_Main_Intro: {
     fontSize: 30,
     fontFamily: 'AntonRegular',
     textAlign: 'left',
-    color: '#F4E9DC',
-    padding: 20,
+    color: 'black',
+    padding: 5,
   },
   title_Low: {
     fontSize: 15,
     fontFamily: 'AntonRegular',
     textAlign: 'left',
     zIndex: 3,
-    color: '#494949',
+    color: 'black',
   },
 
   container_Category: {

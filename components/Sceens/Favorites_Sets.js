@@ -10,9 +10,9 @@
 import { useState, useEffect } from 'react';
 import AsyncStorage from "@react-native-async-storage/async-storage"; // Importar AsyncStorage para acceder a los favoritos
 
-import Styles from './Styles';
-import Loading from './Loading';
-import ListProducts from "./ListProducts";
+import Styles from '../Styles';
+import Loading from '../Loading';
+import ListProducts from "../Funcionality/ListProducts";
 
 export const Favorites_Sets = () => {
     const [favorites, setFavorites] = useState([]); // Añadir un estado para los favoritos

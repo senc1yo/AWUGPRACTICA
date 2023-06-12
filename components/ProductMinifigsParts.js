@@ -11,8 +11,6 @@ import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from 'react-native-vector-icons';
 import CardHolder from "../assets/CardHolder";
 import Styles from './Styles';
-import SvgComponent from '../assets/SvgComponent.jsx';
-import LogoLego from '../assets/LogoLego.jsx';
 import imagenotfound from '../assets/imagenotfound.jpg'; // Importa la imagen local
 const Dev_Height = Dimensions.get('window').height;
 const Dev_Width = Dimensions.get('window').width;

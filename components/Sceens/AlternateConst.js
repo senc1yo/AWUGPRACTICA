@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput } from 'react-native';
-import ListProducts from "./ListProducts";
-import Loading from "./Loading";
+import ListProducts from "../Funcionality/ListProducts";
+import Loading from "../Loading";
 
 export const AlternateConst = ({ route }) => {
   const [altBuilds, setAltBuilds] = useState(null);

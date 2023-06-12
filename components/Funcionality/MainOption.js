@@ -1,17 +1,17 @@
 ﻿import { Pressable, Text, Image } from 'react-native';
-import Styles from './Styles';
+import Styles from '../Styles';
 
 export default MainOption = ({ navigation, title, subtitle }) => {
     let image;
     switch (title) {
         case "Sets":
-            image = require("../assets/SetsNavigation.png");
+            image = require("../../assets/SetsNavigation.png");
             break;
         case "Minifigs":
-            image = require("../assets/MinifigsNavigation.png");
+            image = require("../../assets/MinifigsNavigation.png");
             break;
         case "Parts":
-            image = require("../assets/PartsNavigation.png");
+            image = require("../../assets/PartsNavigation.png");
             break;
         default:
             image = null;

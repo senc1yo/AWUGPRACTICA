@@ -1,30 +1,34 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, SafeAreaView, Image } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Pressable,
+  SafeAreaView,
+  Image,
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Styles from './Styles';
-import imagenotfound from '../assets/imagenotfound.jpg'
-export const DetailsMinifig = ({ route }) => {
+import Styles from '../Styles';
+import imagenotfound from '../../assets/imagenotfound.jpg';
+export const DetailsPart = ({ route }) => {
   console.log(route.params.item);
   const item = route.params.item;
   const navigation = useNavigation();
 
-  const handlePressSets = () => {
+  const handlePress = () => {
     console.log(item);
-    navigation.navigate('SetsMinifig', { item: item });
-  };
-  const handlePressParts = () => {
-    console.log(item);
-    navigation.navigate('MinifigParts', { item: item });
+    navigation.navigate('SetsPart', { item: item });
   };
 
   return (
     <SafeAreaView style={Styles.container_Main}>
-      <View style={styles.container}>
+      <View style={styles.container}>        
         <View style={Styles.detailsCard}>
-          {item.set_img_url ? (
+        <Text style={styles.textTitle}>Información de la parte</Text>
+          {item.part_img_url ? (
             <Image
               style={styles.imageDet}
-              source={{ uri: item.set_img_url }}
+              source={{ uri: item.part_img_url }}
               resizeMode="cover"
             />
           ) : (
@@ -34,19 +38,10 @@ export const DetailsMinifig = ({ route }) => {
               resizeMode="cover"
             />
           )}
-        <Text style={styles.text}>Nombre: {item.name}</Text>
-        <Text style={styles.text}>Nº de set: {item.set_num}</Text>
-        <Text style={styles.text}>Número de partes: {item.num_parts}</Text>
-        <Pressable onPress={handlePressSets}>
-          <View style={[styles.altContainer, { justifyContent: 'center' }]}>
-            <Text style={styles.text}>Sets en los que aparece</Text>
-          </View>
-        </Pressable>
-        <Pressable onPress={handlePressParts}>
-          <View style={[styles.altContainer, { justifyContent: 'center' }]}>
-            <Text style={styles.text}>Partes del minifig</Text>
-          </View>
-        </Pressable>
+          <Text adjustsFontSizeToFit numberOfLines={2} style={styles.text}>
+            Nombre: {item.name}
+          </Text>
+          <Text style={styles.text}>Nº Serie de parte: {item.part_num}</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -65,6 +60,7 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     borderRadius: 25,
+    
     justifyContent: 'center',
     alignSelf: 'center',
   },
@@ -83,6 +79,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
   },
+  textTitle: {
+    position: 'relative',
+    fontFamily: 'AntonRegular',
+    fontSize: 30,
+    textAlign: 'center',
+    color: 'black'
+  },
 });
 
-export default DetailsMinifig;
+export default DetailsPart;

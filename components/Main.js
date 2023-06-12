@@ -1,21 +1,21 @@
 import {Text, Pressable, View, SafeAreaView, Button, TouchableWithoutFeedback} from 'react-native';
-import { Category_Sets } from './Category_Sets';
-import { Category_Parts } from './Category_Parts';
-import { Category_Minifigs } from './Category_Minifigs';
-import { Details } from './Details';
-import { SetsMinifig } from './SetsMinifig';
-import { DetailsMinifig } from './DetailsMinifig';
-import { AlternateConst } from './AlternateConst';
-import { MinifigParts } from './MinifigParts';
-import { DetailsPart } from './DetailsPart';
-import {Favorites_Sets} from "./Favorites_Sets";
-import MainOption from "./MainOption";
+import { Category_Sets } from './Sceens/Category_Sets';
+import { Category_Parts } from './Sceens/Category_Parts';
+import { Category_Minifigs } from './Sceens/Category_Minifigs';
+import { Details } from './Sceens/Details';
+import { SetsMinifig } from './Sceens/SetsMinifig';
+import { DetailsMinifig } from './Sceens/DetailsMinifig';
+import { AlternateConst } from './Sceens/AlternateConst';
+import { MinifigParts } from './Sceens/MinifigParts';
+import { DetailsPart } from './Sceens/DetailsPart';
+import {Favorites_Sets} from "./Sceens/Favorites_Sets";
+import MainOption from "./Funcionality/MainOption";
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Styles from './Styles';
-import FavsButton from "./FavsButton";
-import BackButton from "./BackButton"
+import FavsButton from "./Funcionality/FavsButton";
+import BackButton from "./Funcionality/BackButton"
 import RectangleTitleNav from "../assets/RectangleTitleNav";
 
 const Stack = createStackNavigator();
@@ -144,9 +144,9 @@ const Home = ({ navigation }) => {
             <View>
                 <Text style= {Styles.title_Main_Intro}>{'¿Por dónde empezamos?'}</Text>
             </View>
-            <MainOption navigation={navigation} title="Sets" subtitle="información sobre los sets de lego" />
-            <MainOption navigation={navigation} title="Minifigs" subtitle="información sobre las figuras de lego" />
-            <MainOption navigation={navigation} title="Parts" subtitle="partes de sets de lego" />
+            <MainOption navigation={navigation} title="Sets" subtitle="Información sobre los sets de lego" />
+            <MainOption navigation={navigation} title="Minifigs" subtitle="Información sobre las figuras de lego" />
+            <MainOption navigation={navigation} title="Parts" subtitle="Partes de sets de lego" />
         </SafeAreaView>
     );
 };

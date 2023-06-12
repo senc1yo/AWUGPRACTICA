@@ -55,8 +55,8 @@ const AddFavoriteButton = ({ item }) => {
         <TouchableOpacity onPress={toggleFavorite} style={styles.fav}>
             <Ionicons
                 name={isFavorite ? "star" : "star-outline"}
-                size={20}
-                color="gray"
+                size={50}
+                color="black"
             />
         </TouchableOpacity>
     );

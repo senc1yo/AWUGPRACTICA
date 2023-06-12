@@ -6,32 +6,33 @@ import {
   Dimensions,
   Text
 } from 'react-native';
-
+ import _ from "lodash";
 import {useState, useEffect, useCallback} from 'react';
-import { newSearch } from './Api';
+import { newSearch } from '../Api';
 
-import Styles from './Styles';
-import Loading from './Loading';
-import ListProducts from "./ListProducts";
+import Styles from '../Styles';
+import Loading from '../Loading';
+import ListProducts from "../Funcionality/ListProducts";
 import {useFocusEffect} from "@react-navigation/native";
 
-export const Category_Parts = () => {
+export const Category_Sets = () => {
   const [results, setResults] = useState([]);
   const [firstLoad, setFirstLoad] = useState(true);
   const [scrollToTop, setScrollToTop] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const search = async (val, page) => {
-    const category = '/parts';
+    const category = '/sets';
 
     const q = {
       search: val,
     };
+
     if (page) {
       q.page = page;
     }
     if (!firstLoad){setLoading(true);}
-
+    
     const items = await newSearch(category, q);
 
     setResults(items);
@@ -41,7 +42,7 @@ export const Category_Parts = () => {
       scrollToTop();
     }
   };
-
+  
   useEffect(() => {
     if (firstLoad) {
       const randomPage = Math.floor(Math.random() * 100) + 1;
@@ -49,6 +50,7 @@ export const Category_Parts = () => {
       setFirstLoad(false);
     }
   }, [firstLoad]);
+
   useFocusEffect(
       useCallback(() => {
         setFirstLoad(true);
@@ -56,7 +58,7 @@ export const Category_Parts = () => {
   );
   return (
       <View style={Styles.container_Category}>
-        {loading && firstLoad ? (
+        {loading && firstLoad ?(
             <Loading/>
         ) : (
             <>
@@ -67,7 +69,7 @@ export const Category_Parts = () => {
                   placeholderTextColor="#F4E9DC"
                   type="text"
               />
-              <ListProducts results={results} productType="productParts" />
+              <ListProducts results={results} productType="product" />
               <Text style={Styles.low_text_desplazar}>
                 Desplazate hacia la derecha para ver más
               </Text>

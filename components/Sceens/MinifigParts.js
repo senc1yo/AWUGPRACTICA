@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import { View, Text, TextInput } from 'react-native';
-import ListProducts from "./ListProducts";
-import Styles from './Styles';
-import Loading from "./Loading";
+import ListProducts from "../Funcionality/ListProducts";
+import Styles from '../Styles';
+import Loading from "../Loading";
 
 export const MinifigParts = ({ route }) => {
   const [minifigPart, setMinifigPart] = useState(null);

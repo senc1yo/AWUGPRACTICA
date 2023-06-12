@@ -14,8 +14,6 @@ const Dev_Height = Dimensions.get('window').height;
 const Dev_Width = Dimensions.get('window').width;
 
 import Styles from './Styles';
-import SvgComponent from '../assets/SvgComponent.jsx';
-import LogoLego from '../assets/LogoLego.jsx';
 import imagenotfound from '../assets/imagenotfound.jpg';
 import CardWhite from "../assets/CardWhite"; // Importa la imagen local
 
