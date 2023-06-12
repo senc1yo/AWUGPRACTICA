@@ -8,7 +8,7 @@ const Dev_Width = Dimensions.get('window').width;
 export default Styles = StyleSheet.create({
   text_favoritos: {
     fontSize: 8,
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     textAlign: 'center',
     color: '#fbe413',
   },
@@ -42,21 +42,23 @@ export default Styles = StyleSheet.create({
   },
   title_Main: {
     fontSize: 50,
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     zIndex: 3,
     textAlign: 'left',
     color: 'black',
   },
   title_Main_Intro: {
     fontSize: 30,
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     textAlign: 'left',
     color: 'black',
-    padding: 5,
+    left: -20,
+    top: -10,
+    padding: 30,
   },
   title_Low: {
     fontSize: 15,
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     textAlign: 'left',
     zIndex: 3,
     color: 'black',
@@ -87,7 +89,7 @@ export default Styles = StyleSheet.create({
     marginBottom: 5,
     color: 'black',
     paddingHorizontal: 20,
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     fontSize: 40,
   },
   loading_Category: {
@@ -105,7 +107,7 @@ export default Styles = StyleSheet.create({
   },
   title_Product: {
     fontSize: 30,
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     textAlign: 'center',
   },
   img_Product: {
@@ -133,19 +135,19 @@ export default Styles = StyleSheet.create({
   theme_name: {
     fontSize: 30,
     textAlign: 'center',
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     marginLeft: '-5%',
     maxWidth: Dev_Width * 0.9,
     textAlignVertical: 'center',
   },
   low_text: {
     fontSize: 15,
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     marginLeft: '-5%',
   },
   low_text_desplazar: {
     fontSize: 15,
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     alignSelf: 'center',
     justifyContent: 'center',
     color: '#F4E9DC'
@@ -243,7 +245,7 @@ export default Styles = StyleSheet.create({
   name_of_song_Text1: {
     fontSize: 15,
     textAlign: 'right',
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     adjustsFontSizeToFit: true,
   },
   cardName: {

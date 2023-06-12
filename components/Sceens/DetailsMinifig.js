@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   text: {
     position: 'relative',
-    fontFamily: 'AntonRegular',
+    fontFamily: 'DosisRegular',
     fontSize: 20,
     textAlign: 'center',
   },

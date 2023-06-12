@@ -35,7 +35,7 @@ export const AlternateConst = ({ route }) => {
                     <Text
                         style={{
                             textAlign: 'center',
-                            fontFamily: 'AntonRegular',
+                            fontFamily: 'DosisRegular',
                             alignSelf: 'center',
                             fontSize: 50,
                             color: '#F4E9DC',
